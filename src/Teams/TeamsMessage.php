@@ -2,6 +2,8 @@
 
 namespace Teams;
 
+use \Exception;
+
 class TeamsMessage
 {
     private $color;
@@ -128,7 +130,8 @@ class TeamsMessage
         $result = curl_exec($ch);
         $info = curl_getinfo($ch);
         if ($result === false || $info['http_code'] != 200) {
-            print_r(curl_getinfo($ch));
+            throw new Exception('Something went wrong', $info['http_code']);
         }
+        return true;
     }
 }
