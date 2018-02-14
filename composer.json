@@ -1,0 +1,16 @@
+{
+	"name": "blomman9/teams-notifier",
+	"description": "Teams notification wrapper in PHP",
+	"authors": [
+		{
+			"name": "Robert Blomdalen",
+			"email": "robert.blomdalen@gmail.com"
+		}
+	],
+	"autoload": {
+		"psr-2": {
+			"Teams\\": "src/"
+		}
+	},
+	"license": "MIT"
+}
